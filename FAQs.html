@@ -1,0 +1,443 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+           .navbar-nav .nav-link:hover {
+    color: #0098ff !important;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    color: #0098ff !important;
+    background-color: #f8f9fa;
+  }
+       
+.footer {
+    margin-top: 20px;
+  background-color: #0098ff;
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+ main {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .subtitle {
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .faq-container {
+      width: 600px;
+    }
+
+    .faq-item {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background: #fff;
+      padding: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      background: #f9f7f4;
+      padding: 20px;
+      display: none;
+      font-size: 0.95rem;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .co{
+      margin: 0;
+       font-size: 50px;
+  font-weight: 900;
+  line-height: 60px;
+    }
+      .video-container {
+      position: relative;
+      height: 1000px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      /* min-height: 100%; */
+      height: 900px;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+    .section {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      margin: 0px 27%;
+    }
+
+    .section img {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+      border-radius: 12px;
+      height: 400px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content {
+     height: 500px;
+    }
+
+    .content h4 {
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 4px;
+      color: #777;
+    }
+
+    .content h2 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin: 0 0 10px 0;
+    }
+
+    .content p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      margin: 10% 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat .number {
+      font-size: 54px;
+      font-weight: 500;
+    }
+
+    .stat p {
+      font-size: 12px;
+      color: #333;
+      margin-top: 4px;
+    }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <a class="navbar-brand" href="#">IT Demo Website</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="./index.html">Home</a></li>
+            <li><a class="dropdown-item" href="./DigitalAgency.html">Digital Agency</a></li>
+            <li><a class="dropdown-item" href="./AI.HTML">AI Technology</a></li>
+            <li><a class="dropdown-item" href="./Seoservice.html">SEO Services</a></li>
+            <li><a class="dropdown-item" href="./CustomSoftware.html">Custom Software</a></li>
+            <li><a class="dropdown-item" href="./Startup.html">Start Up</a></li>
+            <li><a class="dropdown-item" href="./marketingAgency.html">Marketing Agency</a></li>
+            <li><a class="dropdown-item" href="./Helpdesk.html">Help Desk</a></li>
+            <li><a class="dropdown-item" href="./AInetwork.html">AI Network</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Servicesa.html">App</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Website</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Page
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./About-us.html">About-us 1</a></li>
+            <li><a class="dropdown-item" href="./About-us2.html">About-us 2</a></li>
+            <li><a class="dropdown-item" href="./Servicesa.html">Service 1</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Service 2</a></li>
+            <li><a class="dropdown-item" href="./ourteam.html">Our Team</a></li>
+            <li><a class="dropdown-item" href="./Contect-us.html">Contect-us 1</a></li>
+            <li><a class="dropdown-item" href="./contect us2.html">Contect-us 2</a></li>
+            <li><a class="dropdown-item" href="./AIfetures.html">AI Features</a></li>
+            <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./pricing 1.html">Pricing -1</a></li>
+            <li><a class="dropdown-item" href="./pricing2.html">Pricing -2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./ourwork.html">Our works</a></li>
+            <li><a class="dropdown-item" href="./Singlepage.html">Single Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./blogs.html">Blog — Standard</a></li>
+            <li><a class="dropdown-item" href="./blogg.html">Blog — Grid</a></li>
+            <li><a class="dropdown-item" href="./blogws.html">With-Slidebar</a></li>
+            <li><a class="dropdown-item" href="./blogwithout.html">Without Slidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./Contect-us.html">Contact-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About-us.html">About-us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="faq-header">
+    <h4 >COMMON QUESTIONS</h4>
+    <h2 class="co">Frequently asked <br/>questions</h2>
+    <p class="subtitle">At Algenix, we address all inquiries regarding our services and expertise in the IT sector.</p>
+  </div>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">What industries do you specialize in? <span>+</span></div>
+      <div class="faq-answer">We specialize in IT-driven industries including fintech, healthcare IT, e-commerce, SaaS, and enterprise software development.</div>
+    </div>
+
+    <div class="faq-item active">
+      <div class="faq-question">What services do you provide? <span>−</span></div>
+      <div class="faq-answer">We offer services such as software development, IT consulting, cloud infrastructure management, cybersecurity solutions, and tech support tailored to IT businesses.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do you define project success? <span>+</span></div>
+      <div class="faq-answer">Success is measured by meeting client goals, delivering within timeline and budget, ensuring system stability, and exceeding quality expectations.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I request a quote? <span>+</span></div>
+      <div class="faq-answer">You can request a quote through our website contact form, by emailing our sales team, or by scheduling a consultation call.</div>
+    </div>
+
+  </div>
+
+</main>
+ <div class="video-container">
+    <video autoplay muted loop>
+      <source src="https://algenix.axiomthemes.com//wp-content//uploads//2025//04//video-ai-technologies.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    </div>
+
+     <div class="section">
+    <img src="./p1.jfif" alt="IT Sector Team" />
+
+    <div class="content">
+      <h4>Empowering your online presence</h4>
+      <h2>We enhance your digital experience</h2>
+      <p>At Algenix, we empower users to craft stunning websites effortlessly. Our themes amplify the web design journey for IT innovators.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="number" data-target="99">0</div>
+          <p>Themes launched</p>
+        </div>
+        <div class="stat">
+          <div class="number" data-target="850">0</div>
+          <p>Happy customers</p>
+        </div>
+    </div>
+        <div class="stats">
+        <div class="stat">
+          <div class="number" data-target="17">0</div>
+          <p>Years in business</p>
+        </div>
+        <div class="stat">
+          <div class="number" data-target="800">0</div>
+          <p>Resolved tickets</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- footer -->
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>We provide innovative IT solutions to help businesses thrive in the digital era.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://algenix.axiomthemes.com/contact-us-1/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+      <p>Address: 123 Tech Street, Surat, Gujarat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s">Facebook</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s">Linked in</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</footer>
+
+
+ <script>
+    document.querySelectorAll('.faq-question').forEach((question) => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach((el) => {
+          el.classList.remove('active');
+          el.querySelector('span').textContent = '+';
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          question.querySelector('span').textContent = '−';
+        }
+      });
+    });
+  </script>
+  <script>
+    // Counter animation on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.number');
+
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / 100;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    });
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
