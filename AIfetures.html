@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Features</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      color: #111;
+      text-align: center;
+    }
+    .section {
+      padding: 60px 20px;
+      border-bottom: 2px solid black;
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .highlight {
+      color: #0098ff; /* Orange */
+    }
+    p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 0;
+    }
+    .blue-btn {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #0098ff;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+   }
+   .toggle-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .toggle-label {
+      font-size: 0.9rem;
+    }
+    .toggle-dot {
+      width: 18px;
+      height: 18px;
+      background-color: #0098ff;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .input-box {
+      margin: 20px auto;
+      background-color: #f3f3f3;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      max-width: 500px;
+    }
+    .input-box input {
+      border: none;
+      background: transparent;
+      flex: 1;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .input-box button {
+      background-color: #0098ff;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .tags {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background-color: #e6e6e6;
+      border-radius: 10px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      color: #333;
+    }
+    .limits {
+      font-size: 0.75rem;
+      color: #555;
+      margin-top: 10px;
+    }
+    .text-gen h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .subtext {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+    }
+    .scrolling-tags {
+      margin: 30px 0;
+      white-space: nowrap;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      padding: 10px 0;
+    }
+    .scrolling-tags span {
+      display: inline-block;
+      margin: 0 12px;
+    }
+    .tag-separator {
+      color: #000;
+    }
+    .request-box {
+      background-color: #f6f3f0;
+      max-width: 550px;
+      margin: 3% 37%;
+      padding: 30px 20px;
+      border-radius: 14px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.05);
+    }
+    .request-box h4 {
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .request-input {
+      background-color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      width: 60%;
+      margin-right: 10px;
+      outline: none;
+    }
+    .request-box button {
+      background-color: #0098ff;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .helper-text {
+      font-size: 0.75rem;
+      margin-top: 15px;
+      color: #333;
+   }
+    .helper-text span {
+      color: #0098ff;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .chat-section {
+      margin: 60px 0;
+    }
+    .chat-section h2 {
+      font-size: 1.8rem;
+    }
+    .chat-badges {
+      margin-top: 10px;
+    }
+    .chat-badges .badge {
+      background-color: #007bff;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      margin: 2px;
+      display: inline-block;
+    }
+    .chat-box {
+      max-width: 480px;
+      margin: 20px auto;
+      text-align: left;
+      background-color: #f3f3f3;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .chat-header {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+    }
+    .chat-content {
+      padding: 10px 14px;
+    }
+    .chat-input {
+      display: flex;
+      background-color: #fff;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+    .chat-input input {
+      flex: 1;
+      border: none;
+      font-size: 0.9rem;
+      padding: 8px 10px;
+      border-radius: 8px;
+      margin-right: 10px;
+      outline: none;
+    }
+    .chat-input button {
+      background-color: #0098ff;
+      border: none;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+      .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 90px;
+}
+.marquee-content {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  animation: scrollLeft 20s linear infinite;
+}
+.marquee-content span {
+  margin: 0 15px;
+  color: #111;
+  font-size: 50px;
+  font-weight: 500;
+}
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+           .navbar-nav .nav-link:hover {
+    color: #0098ff !important;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    color: #0098ff !important;
+    background-color: #f8f9fa;
+  }   
+.footer {
+    margin-top: 20px;
+  background-color: #0098ff;
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  color:#ffffff ;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.footer p {
+    color: #ffffff;
+}
+  </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <a class="navbar-brand" href="#">IT Demo Website</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Home</a></li>
+            <li><a class="dropdown-item" href="./DigitalAgency.html">Digital Agency</a></li>
+            <li><a class="dropdown-item" href="./AI.HTML">AI Technology</a></li>
+            <li><a class="dropdown-item" href="./Seoservice.html">SEO Services</a></li>
+            <li><a class="dropdown-item" href="./CustomSoftware.html">Custom Software</a></li>
+            <li><a class="dropdown-item" href="./Startup.html">Start Up</a></li>
+            <li><a class="dropdown-item" href="./marketingAgency.html">Marketing Agency</a></li>
+            <li><a class="dropdown-item" href="./Helpdesk.html">Help Desk</a></li>
+            <li><a class="dropdown-item" href="./AInetwork.html">AI Network</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Servicesa.html">App</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Website</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Page
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./About-us.html">About-us 1</a></li>
+            <li><a class="dropdown-item" href="./About-us2.html">About-us 2</a></li>
+            <li><a class="dropdown-item" href="./Servicesa.html">Service 1</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Service 2</a></li>
+            <li><a class="dropdown-item" href="./ourteam.html">Our Team</a></li>
+            <li><a class="dropdown-item" href="./Contect-us.html">Contect-us 1</a></li>
+            <li><a class="dropdown-item" href="./contect us2.html">Contect-us 2</a></li>
+            <li><a class="dropdown-item" href="./AIfetures.html">AI Features</a></li>
+            <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./pricing 1.html">Pricing -1</a></li>
+            <li><a class="dropdown-item" href="./pricing2.html">Pricing -2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./ourwork.html">Our works</a></li>
+            <li><a class="dropdown-item" href="./Singlepage.html">Single Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./blogs.html">Blog — Standard</a></li>
+            <li><a class="dropdown-item" href="./blogg.html">Blog — Grid</a></li>
+            <li><a class="dropdown-item" href="./blogws.html">With-Slidebar</a></li>
+            <li><a class="dropdown-item" href="./blogwithout.html">Without Slidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./Contect-us.html">Contact-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About-us.html">About-us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- AI Art Generator Section -->
+  <section class="section">
+    <h2>Create beautiful art with <span class="highlight"><br/>artificial intelligence</span></h2>
+    <p>Be advised that image generation requires an active OpenAI, Stability AI or Stable Diffusion token.</p>
+    <div class="blue-btn">Three APIs integrated: OpenAI, Stable Diffusion and Stability AI (100+ models combined)</div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Standart <span class="toggle-dot"></span></span>
+      <span class="toggle-label">Advanced</span>
+    </div>
+
+    <div class="input-box">
+      <input type="text" placeholder="Describe what you want or hit a tag below">
+      <button>Generate</button>
+    </div>
+
+    <div class="tags">
+      <div class="tag">Creative</div>
+      <div class="tag">Hyperreality</div>
+      <div class="tag">Steampunk</div>
+      <div class="tag">Illustration</div>
+    </div>
+
+    <p class="limits">
+      Limits per hour: 80 images for all visitors and up to 2 requests from a single visitor.<br>
+      Used: 0 images, 0 requests.
+    </p>
+  </section>
+
+  <!-- Text Generator Section -->
+  <section class=" text-gen">
+    <h2>Text generator helps you write<br>
+      <span class="highlight">better, faster and smarter</span></h2>
+    <p class="subtext">Write smarter and save time with the help of AI-powered tools.</p>
+  </section>
+
+ <div class="marquee-container">
+  <div class="marquee-content">
+    <span>development &#x2727;</span>
+    <span>agency &#x2727;</span>
+    <span>design &#x2727;</span>
+    <span>creative &#x2727;</span>
+    <span>figma &#x2727;</span>
+    <span>themeforest &#x2727;</span>
+    <span>ui/ux &#x2727;</span>
+    <span>wordpress &#x2727;</span>
+    <span>development &#x2727;</span>
+    <span>agency &#x2727;</span>
+    <span>design &#x2727;</span>
+    <span>creative &#x2727;</span>
+    <span>figma &#x2727;</span>
+    <span>themeforest &#x2727;</span>
+    <span>ui/ux &#x2727;</span>
+    <span>wordpress &#x2727;</span>
+  </div>
+    </div>
+
+  <!-- Request Box -->
+  <div class="request-box">
+    <h4>What is your request or topic?</h4>
+    <input type="text" class="request-input" placeholder="Describe what you want or select a text type">
+    <button>Generate</button>
+    <p class="helper-text">Write a <span>text type</span> or <span>process text</span></p>
+  </div>
+
+  <!-- Chatbot Section -->
+  <div class="chat-section">
+    <h2>Personal <span class="highlight">AI chat bot</span></h2>
+    <div class="chat-badges">
+      <span class="badge">✔ Cost-effective</span>
+      <span class="badge">✔ 24/7 availability</span>
+      <span class="badge">✔ Flexibility</span>
+    </div>
+
+    <div class="chat-box">
+      <div class="chat-header">How can I help you? <span style="float:right;">New chat</span></div>
+      <div class="chat-content">
+        <!-- Optional: place for chat messages -->
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message...">
+        <button>Send</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>We provide innovative IT solutions to help businesses thrive in the digital era.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://algenix.axiomthemes.com/contact-us-1/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+      <p>Address: 123 Tech Street, Surat, Gujarat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s">Facebook</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s">Linked in</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

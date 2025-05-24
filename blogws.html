@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The role of analytics in...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        .footer {
+    margin-top: 20px;
+  background-color: #0098ff;
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.container {
+  display: flex;
+  max-width: 800px;
+ margin: 50px auto;
+ padding: 0 20px;
+  cursor: pointer;
+}
+    .category {
+      color: #0098ff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+.main-content {
+  flex: 3;
+  margin-right: 2rem;
+}
+
+
+
+.sidebar {
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.categories,
+.recent-posts {
+  margin-top: 2rem;
+}
+
+.categories ul,
+.recent-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categories li,
+.recent-posts li {
+  margin: 0.5rem 0;
+}
+
+.logo img {
+  width: 100%;
+  margin-top: 2rem;
+}
+ .post:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+    .title {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .post-image {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-left: 5px solid #0098ff;
+      margin: 20px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+
+  h1{
+  margin: 0% 20%;
+   font-size: 50px;
+  font-weight: 900;
+  line-height: 60px;
+  text-align: center;
+}
+
+ .suggested-posts {
+      margin: 0 35%;
+      margin-top: 60px;
+    }
+
+    .suggested-posts h2 {
+     margin: 50px 25%;
+      padding: 0 20px;
+    }
+
+    .post-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .post {
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 16px;
+    }
+
+    .post-category {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: gray;
+      margin-bottom: 6px;
+    }
+
+    .post-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    } 
+       .navbar-nav .nav-link:hover {
+    color: #0098ff !important;
+  }
+
+  /* Dropdown items hover */
+  .dropdown-menu .dropdown-item:hover {
+    color: #0098ff !important;
+    background-color: #f8f9fa;
+  }
+  
+
+    .post-date {
+      font-size: 14px;
+      color: #555;
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <a class="navbar-brand" href="#">IT Demo Website</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Home</a></li>
+            <li><a class="dropdown-item" href="./DigitalAgency.html">Digital Agency</a></li>
+            <li><a class="dropdown-item" href="./AI.HTML">AI Technology</a></li>
+            <li><a class="dropdown-item" href="./Seoservice.html">SEO Services</a></li>
+            <li><a class="dropdown-item" href="./CustomSoftware.html">Custom Software</a></li>
+            <li><a class="dropdown-item" href="./Startup.html">Start Up</a></li>
+            <li><a class="dropdown-item" href="./marketingAgency.html">Marketing Agency</a></li>
+            <li><a class="dropdown-item" href="./Helpdesk.html">Help Desk</a></li>
+            <li><a class="dropdown-item" href="./AInetwork.html">AI Network</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Servicesa.html">App</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Website</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Page
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./About-us.html">About-us 1</a></li>
+            <li><a class="dropdown-item" href="./About-us2.html">About-us 2</a></li>
+            <li><a class="dropdown-item" href="./Servicesa.html">Service 1</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Service 2</a></li>
+            <li><a class="dropdown-item" href="./ourteam.html">Our Team</a></li>
+            <li><a class="dropdown-item" href="./Contect-us.html">Contect-us 1</a></li>
+            <li><a class="dropdown-item" href="./contect us2.html">Contect-us 2</a></li>
+            <li><a class="dropdown-item" href="./AIfetures.html">AI Features</a></li>
+            <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./pricing 1.html">Pricing -1</a></li>
+            <li><a class="dropdown-item" href="./pricing2.html">Pricing -2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./ourwork.html">Our works</a></li>
+            <li><a class="dropdown-item" href="./Singlepage.html">Single Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./blogs.html">Blog — Standard</a></li>
+            <li><a class="dropdown-item" href="./blogg.html">Blog — Grid</a></li>
+            <li><a class="dropdown-item" href="./blogws.html">With-Slidebar</a></li>
+            <li><a class="dropdown-item" href="./blogwithout.html">Without Slidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./Contect-us.html">Contact-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About-us.html">About-us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <main class="main-content">
+      <div class="category">IT Services</div>
+    <h1 class="title">The role of analytics in modern IT services</h1>
+    <div class="meta">John Doe • Apr 21, 2025 • 2 Comments</div>
+
+    <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-135-copyright.jpg" alt="hello mac image" class="post-image" />
+
+    <p>
+      Aenean arcu metus, suscipit ac sagittis vel, varius vulputate purus. Vestibulum eget felis ac quam suscipit
+      elementum eget at dui. Curabitur accumsan dignissim malesuada. Mauris tempor imperdiet nisi, at iaculis
+      velit laoreet eget. Aenean non nibh et ex egestas maximus. Aenean bibendum iaculis lacinia.
+    </p>
+
+    <p>
+      Praesent imperdiet dignissim sagittis. Integer vehicula tellus ut lobortis rhoncus. Nunc nisi dui, ultrices
+      quis diam eget, elementum vulputate neque. Aliquam eget ex quis nulla ultrices congue. Nunc sit amet orci
+      sit amet dolor ultricies placerat ut quis nisl. Nulla facilisi.
+    </p>
+
+    <h3>Quisque at tortor purus. Cras ut molestie risus.</h3>
+
+    <p>
+      Donec rutrum nibh nec odio malesuada blandit. Suspendisse id ante in orci imperdiet convallis. Donec sodales
+      tellus ac velit bibendum eu consequat purus rhoncus. Phasellus dictum diam ut varius varius. Nunc vehicula
+      augue vitae pulvinar placerat. Phasellus eleifend massa diam, eget eleifend velit condimentum ac. Nulla
+      gravida purus at lacus cursus vulputate. Pellentesque imperdiet rhoncus lorem, sed gravida orci volutpat at.
+    </p>
+
+    <blockquote>
+      Vivamus pharetra lacus id lectus sagittis venenatis consectetur sed mauris. Duis ut erat vehicula felis. Nunc
+      odio nulla, mattis nec purus nec, maximus placerat lacus.
+      <cite>— Jane Smith</cite>
+    </blockquote>
+
+    <p>
+      Donec id blandit felis. Aenean placerat sodales commodo. In sed odio at sapien consequat semper ac a elit. Nunc consequat ac tortor quis dignissim. Integer ac commodo elit. Donec finibus cursus tortor, et bibendum turpis interdum non. Nam mattis enim in metus interdum, vel suscipit arcu porttitor. Cras vitae nisi et dui efficitur fringilla ut vitae sapien. Morbi ultricies mollis vulputate. Nunc ultrices ultrices sapien, at rutrum felis cursus ut. Aenean quis ante est. Vestibulum nec lorem molestie leo eleifend commodo. Mauris at eleifend quam. Nam risus lectus, rutrum ut aliquet a, gravida sed libero.
+    </p>
+     <img src= https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-124-copyright-1290x725.jpg alt="hello mac image" class="post-image" />
+    <h3>Sed maximus felis</h3>
+    <p>
+      Aenean arcu metus, suscipit ac sagittis vel, varius vulputate purus. Vestibulum eget felis at ipsum suscipit elementum eget a nulla. Curabitur auctor dignissim vestibulum. Praesent vel imperdiet nunc, sit amet venenatis sapien. Aenean quis varius nibh, vel egestas metus. Aenean blandit varius lacinia. Praesent imperdiet egestas aliquet. Integer luctus ex quis feugiat malesuada. Nulla quis mollis leo, quis aliquam sem. Cras et est id dolor elementum volutpat eget et augue. Nulla eu sollicitudin lorem.
+    </p> 
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="categories">
+        <h4>Categories</h4>
+        <ul>
+          <li>Agency Services</li>
+          <li>Digital Marketing</li>
+          <li>Tech Insights</li>
+          <li>Tech Trends</li>
+          <li>IT Services</li>
+        </ul>
+      </div>
+      <div class="recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li>Innovative technology trends shaping the digital agency landscape</li>
+          <li>Navigating the future of IT services and digital transformations</li>
+        </ul>
+      </div>
+      <div class="logo">
+          <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-30-copyright-924x520.jpg" alt="Tech Trends" />
+      </div>
+      <div class="logo">
+          <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-32-copyright-924x520.jpg" alt="Tech Trends" />
+      </div>
+    </aside>
+  </div>
+
+   <div class="suggested-posts">
+    <h2>You May Also Like</h2>
+    <div class="post-container">
+      <div class="post">
+        <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-30-copyright-410x230.jpg" alt="Post 1">
+        <div class="post-content">
+          <div class="post-category">DIGITAL MARKETING</div>
+          <div class="post-title">Innovative technology trends shaping the digital agency landscape</div>
+          <div class="post-date">Apr 27, 2025 • 2 Comments</div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-142-copyright-410x230.jpg" alt="Post 2">
+        <div class="post-content">
+          <div class="post-category">IT Services</div>
+          <div class="post-title">How to choose the right digital agency</div>
+          <div class="post-date">Apr 27, 2025 • 0 Comments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>We provide innovative IT solutions to help businesses thrive in the digital era.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://algenix.axiomthemes.com/contact-us-1/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+      <p>Address: 123 Tech Street, Surat, Gujarat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s">Facebook</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s">Linked in</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

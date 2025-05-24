@@ -1,0 +1,630 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEO Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+           .navbar-nav .nav-link:hover {
+    color: #0098ff !important;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    color: #0098ff !important;
+    background-color: #f8f9fa;
+  }      
+.footer {
+    margin-top: 20px;
+  background-color: #0098ff;
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+  .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px;
+      height: 70vh;
+      position: relative;
+      overflow: hidden;
+      flex-wrap: wrap;
+      animation: slideUp 1.2s ease-out both;
+    }
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .background-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 18vw;
+      font-weight: bold;
+      color: rgba(200, 100, 100, 0.08);
+      width: 100%;
+      text-align: center;
+      z-index: 0;
+      line-height: 0.8;
+      pointer-events: none;
+    }
+    .hero-content {
+      flex: 1;
+      z-index: 1;
+      max-width: 600px;
+    }
+    .headline {
+      font-size: 60px;
+      font-weight: bold;
+      color: #0098ff;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .subtext {
+      font-size: 14px;
+      color: #444;
+    }
+    .hero-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .hero-image img {
+      width: 280px;
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+      }
+      .headline {
+        font-size: 36px;
+      }
+      .background-text {
+        font-size: 24vw;
+      }
+      .hero-image {
+        margin-top: 30px;
+      }
+      .hero-image img {
+        width: 200px;
+      }
+    }
+    .slider{
+      padding: 40px;
+        margin-top:10px ;
+        margin-right: 0px;
+        height: 600px;
+        width: 100%;
+    }
+    .top-section {
+    margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 500px;
+    }
+    .left-text {
+        margin-top: 20px;
+      max-width: 400px;
+      flex: 1;
+    }
+    .left-text h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .left-text p {
+      font-size: 25px;
+      color: #333;
+    }
+    .top-stats {
+        display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-top: 60px;
+      gap: 60px;
+      flex: 1; 
+    }
+    .stat {
+      text-align: left;
+    }
+    .number {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .label {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .bottom-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+      .main{
+            display: flex;
+        }
+        .main img{
+            margin: 0px;
+            border-top-right-radius: 5%;
+            border-bottom-right-radius: 5%;
+        }
+        .info{
+           margin-left: 200px;
+    margin-top: 300px;
+        }
+        .info .em{
+             font-size: 25px;
+        font-weight: 500;
+  line-height: 40px;            
+        }
+     .text-slider-container {
+      width: 100%;
+      overflow: hidden;
+      background: white;
+      padding: 20px 0;
+    }
+    .text-slider-track {
+      display: flex;
+      width: max-content;
+      animation: scrollText 20s linear infinite;
+    }
+    .text-slide {
+      font-size: 60px;
+      font-weight: bold;
+      color: #0098ff;
+      margin-right: 100px;
+      white-space: nowrap;
+    }
+    @keyframes scrollText {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+     .button {
+      padding: 15px 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: #0098ff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      /* overflow: hidden; */
+    }
+    .button::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      background: #0070ff;
+      z-index: 0;
+      transition: height 0.3s ease;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .button:hover::before {
+      height: 100%;
+    }
+  .button span {
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+    }
+    hr{
+        opacity: 500;
+    }
+      .section-title {
+      padding: 40px 20px;
+      font-size: 28px;
+      color: #0098ff;
+      font-weight: bold;
+    }
+    .hero-imag {
+      text-align: center;
+    }
+    .hero-imag img {
+      max-width: 100%;
+      height: auto;
+    }
+    .services-section {
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .services-section h2 {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 151px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .service-card h3 {
+      font-size: 16px;
+      color: #c62828;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: #333;
+    }
+ .yt {
+  /* margin: 60px auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  /* background: #111; */
+  padding: 40px 20px;
+  /* max-width: 1200px; */
+}
+.full-black-bg {
+  background-color: #111;
+  color: white;
+  /* width: 100%; */
+  /* min-height: 70vh; make it full screen height */
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  margin-top: 20px;
+}
+.imed img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+} 
+    </style>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <a class="navbar-brand" href="#">IT Demo Website</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Home</a></li>
+            <li><a class="dropdown-item" href="./DigitalAgency.html">Digital Agency</a></li>
+            <li><a class="dropdown-item" href="./AI.HTML">AI Technology</a></li>
+            <li><a class="dropdown-item" href="./Seoservice.html">SEO Services</a></li>
+            <li><a class="dropdown-item" href="./CustomSoftware.html">Custom Software</a></li>
+            <li><a class="dropdown-item" href="./Startup.html">Start Up</a></li>
+            <li><a class="dropdown-item" href="./marketingAgency.html">Marketing Agency</a></li>
+            <li><a class="dropdown-item" href="./Helpdesk.html">Help Desk</a></li>
+            <li><a class="dropdown-item" href="./AInetwork.html">AI Network</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Servicesa.html">App</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Website</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Page
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./About-us.html">About-us 1</a></li>
+            <li><a class="dropdown-item" href="./About-us2.html">About-us 2</a></li>
+            <li><a class="dropdown-item" href="./Servicesa.html">Service 1</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Service 2</a></li>
+            <li><a class="dropdown-item" href="./ourteam.html">Our Team</a></li>
+            <li><a class="dropdown-item" href="./Contect-us.html">Contect-us 1</a></li>
+            <li><a class="dropdown-item" href="./contect us2.html">Contect-us 2</a></li>
+            <li><a class="dropdown-item" href="./AIfetures.html">AI Features</a></li>
+            <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./pricing 1.html">Pricing -1</a></li>
+            <li><a class="dropdown-item" href="./pricing2.html">Pricing -2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./ourwork.html">Our works</a></li>
+            <li><a class="dropdown-item" href="./Singlepage.html">Single Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./blogs.html">Blog — Standard</a></li>
+            <li><a class="dropdown-item" href="./blogg.html">Blog — Grid</a></li>
+            <li><a class="dropdown-item" href="./blogws.html">With-Slidebar</a></li>
+            <li><a class="dropdown-item" href="./blogwithout.html">Without Slidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./Contect-us.html">Contact-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About-us.html">About-us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <div class="hero">
+    <div class="background-text">
+      CONQUER<br>ALGENIX
+    </div>
+    <div class="hero-content">
+      <div class="headline">IT agency<br>for every solution</div>
+      <div class="subtext">
+        Forward-thinking experts delivering technology, strategy, and growth daily.
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/decor-gold-figure.png" alt="Golden Shape">
+    </div>
+  </div>
+  <hr/>
+
+   <div class="slider">
+            <div class="top-section">
+    <div class="left-text">
+      <h2>By the numbers</h2>
+      <p>Algenix has successfully transformed numerous businesses through innovative technology solutions.</p>
+    </div>
+    <!-- Right stats -->
+    <div class="top-stats">
+      <div class="stat">
+        <div class="number" data-target="80" data-suffix="%">0%</div>
+        <div class="label">Repeat clients</div>
+      </div>
+      <div class="stat">
+        <div class="number" data-target="850" data-suffix="+">0+</div>
+        <div class="label">Clients served</div>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom Grid -->
+  <div class="bottom-stats">
+    <div class="stat">
+      <div class="number" data-target="17" data-suffix="+">0+</div>
+      <div class="label">Years of experience</div>
+    </div>
+    <div class="stat">
+      <div class="number" data-target="1000" data-suffix="+">0+</div>
+      <div class="label">Projects completed</div>
+    </div>
+    <div class="stat">
+      <div class="number" data-target="800" data-suffix="+">0+</div>
+      <div class="label">Successful campaigns</div>
+    </div>
+    <div class="stat">
+      <div class="number" data-target="500">0</div>
+      <div class="label">Industry awards</div>
+    </div>
+  </div>
+        </div>
+    
+     <div class="main">
+        <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-63-copyright.jpg">
+        <div class="info">
+            <p class="em">Empowering businesses</p>
+            <h1>Transform brands <br/>with technology</h1>
+            <p>IT and digital agency dedicated to <br/>transforming businesses through innovative technology solutions.</p>
+             <button class="button" onclick="alert('Cooming Soon!')"><span>Services</span></button>
+        </div>
+    </div>
+
+    <div class="text-slider-container">
+    <div class="text-slider-track">
+      <div class="text-slide">Results, not promises.</div>
+      <div class="text-slide">Results, not promises.</div>
+      <div class="text-slide">Results, not promises.</div>
+      <div class="text-slide">Results, not promises.</div>
+      <div class="text-slide">Results, not promises.</div>
+      <div class="text-slide">Results, not promises.</div>
+    </div>
+  </div>
+  <hr/>
+
+  <div class="section-title">See how we <br/>conquer Google</div>
+
+  <div class="hero-imag">
+    <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-64-copyright-924x366.jpg" alt="Hero Triangle Image">
+  </div>
+<div class="full-black-bg">
+  <div class="yt">
+    <div class="imed">
+      <img src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-65-copyright-768x768.jpg" alt="Walking Image">
+    </div>
+    <div class="services-section">
+      <h2>Your ticket to the top</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <h3>Link building</h3>
+          <p>We are a creative agency that transforms brands.</p>
+        </div>
+        <div class="service-card">
+          <h3>Local SEO</h3>
+          <p>Our mission is to empower your businesses.</p>
+        </div>
+        <div class="service-card">
+          <h3>E-commerce SEO</h3>
+          <p>We specialize in technical strategy and web design.</p>
+        </div>
+        <div class="service-card">
+          <h3>Flexible services</h3>
+          <p>We empower brands through innovative digital solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>We provide innovative IT solutions to help businesses thrive in the digital era.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://algenix.axiomthemes.com/contact-us-1/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+      <p>Address: 123 Tech Street, Surat, Gujarat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s">Facebook</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s">Linked in</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</footer>
+
+     <script>
+    const counters = document.querySelectorAll('.number');
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix') || '';
+      let count = 0;
+      const increment = target / 100;
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.textContent = Math.ceil(count) + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>

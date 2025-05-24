@@ -1,0 +1,683 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+           .navbar-nav .nav-link:hover {
+    color: #0098ff !important;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    color: #0098ff !important;
+    background-color: #f8f9fa;
+  }
+        .h1{
+    text-align: center;
+        }
+        .infromation{
+            display: flex;
+            margin: 0px 20%
+        }
+        .infotext{
+          align-items: center;
+            margin-top: 15px;
+            /* margin-left: 300px; */
+            height: 100%;
+            width: 50%;
+        }
+        .infotext img{
+             margin-bottom: 200px;
+            height: 500px;
+            width: 500px;
+            border-radius: 10%;
+        }
+        .infoimg1{
+            align-items: center;
+            margin-top: 15px;
+            /* margin-left: 500px; */
+            height: 100%;
+            width: 40%;
+        }
+        .infoimg1 .first{
+             font-size: 30px;
+         font-weight: 500;
+        line-height: 50px;
+        }
+        .infoimg1 .h1{
+             font-size: 70px;
+         font-weight: 1000;
+        line-height: 60px;
+        }
+        .infoimg1 p{
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
+}
+        .infoimg1 img{
+             margin-top: 200px;
+             border-radius: 25px;
+            /* padding-right: 50px; */
+            height: 600px;
+            width: 600px;
+        }
+       
+.footer {
+    margin-top: 20px;
+  background-color: #0098ff;
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+ .herosection{
+      margin-top: 0px;
+      height: 80%;
+      width: 100%;
+      background: url('https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-82-copyright.jpg')  no-repeat center center/cover;
+    }
+    .herosection h1{
+        align-items: center;
+        text-align: center;
+        padding-top: 15%;
+        color: white;
+    }
+    .herosection button{
+        height: 90px;
+        width: 200px;
+        border-radius: 50px;
+        align-items: center;
+        margin-left: 45%;
+        background: #0098ff;
+        color: white;
+    }
+
+    .digital{
+        margin: 5% 30%;
+        text-align: center;
+    }
+    .div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    .service{
+        text-align: center;
+        display: flex;
+        margin-top: 10px;
+    }
+     .scrolling-bar {
+      background-color: #0098ff;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 10px 0;
+      height: 50px;  
+    }
+
+    .scrolling-bar .content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 30s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    .scrolling-bar span {
+      margin: 0 20px;
+      font-size: 1.2rem;
+    }
+    .brand-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .brand-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .brand-section p {
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .image-grid {
+      display: flex;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .image-grid img {
+      width: 50%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .img{
+        height: auto;
+        width: 100%;
+    }
+    .img img{
+        margin-top: 10px;
+        height: 380px;
+        width: 300px;
+    }
+     .testimonial-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .testimonial-section h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      max-width: 600px;
+      margin: 10px 35%;
+    }
+
+    .testimonial-card .stars {
+      color: #f6a600;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      color: #000;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      gap: 40px;
+    }
+
+    .team-text {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    .team-text h5 {
+      color: #888;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .team-text h2 {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+
+    .team-text p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .team-members {
+      flex: 2 1 600px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .team-member {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      flex: 0 0 calc(50% - 15px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .team-member:hover img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      padding: 16px;
+    }
+
+    .team-info h4 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .team-info p {
+      margin-top: 4px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-text {
+        max-width: 100%;
+        text-align: center;
+      }
+      .team-members {
+        justify-content: center;
+      }
+      .team-member {
+        flex: 0 0 100%;
+      }
+    }
+    .img{
+      margin-top: 0px;
+      height: 80%;
+      width: 100%;
+      background: url('https://img.freepik.com/free-photo/about-us-information-service-sharing-join-concept_53876-124056.jpg')  no-repeat center center/cover;
+    }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <a class="navbar-brand" href="#">IT Demo Website</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Home</a></li>
+            <li><a class="dropdown-item" href="./DigitalAgency.html">Digital Agency</a></li>
+            <li><a class="dropdown-item" href="./AI.HTML">AI Technology</a></li>
+            <li><a class="dropdown-item" href="./Seoservice.html">SEO Services</a></li>
+            <li><a class="dropdown-item" href="./CustomSoftware.html">Custom Software</a></li>
+            <li><a class="dropdown-item" href="./Startup.html">Start Up</a></li>
+            <li><a class="dropdown-item" href="./marketingAgency.html">Marketing Agency</a></li>
+            <li><a class="dropdown-item" href="./Helpdesk.html">Help Desk</a></li>
+            <li><a class="dropdown-item" href="./AInetwork.html">AI Network</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./Servicesa.html">App</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Website</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Page
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./About-us.html">About-us 1</a></li>
+            <li><a class="dropdown-item" href="./About-us2.html">About-us 2</a></li>
+            <li><a class="dropdown-item" href="./Servicesa.html">Service 1</a></li>
+            <li><a class="dropdown-item" href="./Servicesw.html">Service 2</a></li>
+            <li><a class="dropdown-item" href="./ourteam.html">Our Team</a></li>
+            <li><a class="dropdown-item" href="./Contect-us.html">Contect-us 1</a></li>
+            <li><a class="dropdown-item" href="./contect us2.html">Contect-us 2</a></li>
+            <li><a class="dropdown-item" href="./AIfetures.html">AI Features</a></li>
+            <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./pricing 1.html">Pricing -1</a></li>
+            <li><a class="dropdown-item" href="./pricing2.html">Pricing -2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./ourwork.html">Our works</a></li>
+            <li><a class="dropdown-item" href="./Singlepage.html">Single Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./blogs.html">Blog — Standard</a></li>
+            <li><a class="dropdown-item" href="./blogg.html">Blog — Grid</a></li>
+            <li><a class="dropdown-item" href="./blogws.html">With-Slidebar</a></li>
+            <li><a class="dropdown-item" href="./blogwithout.html">Without Slidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./Contect-us.html">Contact-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About-us.html">About-us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <div class="img">
+ </div>
+
+    <div class="maindiv">
+        <h1 class="h1">About Us — 2</h1>
+       <div class="infromation">
+  <div class="infotext">
+    <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-07/07/full/1720369883-1424.jpg?im=FeatureCrop%2Csize%3D%28826%2C465%29" alt="Digital Solutions">
+  </div>
+  <div class="infoimg1">
+    <p class="first">Leading IT Services</p>
+    <h1>Innovate, Scale,<br/>and Succeed</h1>
+    <p>Algenix delivers enterprise-grade IT solutions designed to accelerate growth and improve operational efficiency. From cloud computing to AI-driven insights, we equip businesses with the tools they need for success.</p>
+    <img src="https://www.india-briefing.com/news/wp-content/uploads/2023/06/Foreign-Investment-Opportunities-in-Indias-IT-Sector.jpg" alt="Technology Strategy">
+  </div>
+</div>
+
+
+        <div class="digital">
+            <div  class="div">
+                <h4>Empowering Your Brand Journey</h4>
+                <h1>We innovate digital <br/>experiences</h1>
+            </div>
+            <hr/>
+            <div class="service">
+                        <h1>01</h1>
+                        <h1>Web design & development</h1>
+                        <p>We specialize in creating unique digital experiences <br/>that resonate with your audience. Our team is <br/>dedicated to delivering solutions that drive engagement and growth.</p>
+            </div>
+            <div class="service">
+                        <h1>02</h1>
+                        <h1>Digital marketing, SEO,SMM</h1>
+                        <p>At Elementra, we specialize in crafting unique digital <br/>experiences that engage and inspire. Our team is  <br/>dedicated to deliveringinnovative solutions tailored to your brand’s needs.</p>
+            </div>
+            <div class="service">
+                        <h1>03</h1>
+                        <h1>Branding & strategy</h1>
+                        <p>Elementra specializes in crafting unique digital<br/>experiences thatengage and inspire. Our services are designed to elevate <br/>your brand and connect with your audience effectively.</p>
+            </div>
+        </div>
+
+    <div class="scrolling-bar">
+    <div class="content">
+      <span>→ ai solutions</span>
+      <span>→ api integration</span>
+      <span>→ smart automation</span>
+      <span>→ neural models</span>
+      <span>→ machine learning</span>
+      <span>→ ui/ux</span>
+      <span>→ wordpress</span>
+      <span>→ development</span>
+      <span>→ ai solutions</span>
+      <span>→ api integration</span>
+      <span>→ smart automation</span>
+      <span>→ neural models</span>
+      <span>→ machine learning</span>
+      <span>→ ui/ux</span>
+      <span>→ wordpress</span>
+      <span>→ development</span>
+      
+    </div>
+  </div>
+ <div class="brand-section">
+  <small>MODERN IT SOLUTIONS</small>
+  <h2>Drive Your Digital Transformation</h2>
+  <p>At Algenix, we provide cutting-edge IT services that empower enterprises to stay competitive in a rapidly evolving digital landscape. Our custom solutions bridge the gap between technology and business needs.</p>
+  
+  <div class="image-grid">
+    <img src="https://enterprisewired.com/wp-content/uploads/2024/04/2-Harnessing-the-Power-of-Modern-Technology-Solutions-for-Business-Success.jpg" alt="IT Service Image 1">
+    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="IT Service Image 2">
+
+    <div class="img">
+      <img src="https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-big-cloud-computing-infrastructure-elements-connected-with-dashed-lines-vector-illustration_1284-30495.jpg?semt=ais_hybrid&w=740" alt="IT Service Image 3">
+      <img src="data:image/jpeg;base64,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" alt="IT Service Image 4">
+    </div>
+  </div>
+</div>
+
+  <section class="testimonial-section">
+    <h2>What Customers are Saying?</h2>
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+           Overall had a fantastic experience working with <br/>
+           Narola. Job was well done, works well, and <br/>
+           customers love it. Easy to work with them as well- <br/>
+           highly responsive and adaptable. I would work with <br/>
+           them again. Only point for improvement is that <br/>
+           sometimes the code structure and logic could be simpler.
+          </p>
+          <strong>Tucker Ward | USA</strong>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+           Work was done in a professional manner. All bugs <br/>
+           were fixed. Overall experience was good. Amazing <br/>
+           job by the entire QA Team. I would highly recommend <br/>
+           using them for all your QA needs.
+          </p>
+          <strong>Erika V. A’Connor| USA</strong>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Since our inception, we have always acted as a partner to our <br/>clients, not a services provider. We place a huge value on <br/>
+            strong long term relationships. With their trust & <br/>
+            collaboration, we develop solutions that help them with their <br/>
+            business outcomes.
+          </p>
+          <strong>Eric Del Buono</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="herosection">
+    <h1>Contact us today and find out <br/>how we can help</h1>
+    <button>Our Soulution</button>
+    </div>
+
+     <div class="team-container">
+    <div class="team-text">
+      <h5>MEET OUR TEAM</h5>
+      <h2>Our team</h2>
+      <p>We’re 120+ individuals from across the world driven by bold ideas</p>
+    </div>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="./p1.jfif">
+        <div class="team-info">
+          <h4>James Robinson</h4>
+          <p>Business Development</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="./p2.jfif"
+        alt="Sophia Lee">
+        <div class="team-info">
+          <h4>Nick Carter</h4>
+          <p>Strategy Consultant</p>
+        </div>
+      </div>
+      <div class="team-member">
+       <img src="./p3.jfif" alt="Sophia Lee">
+        <div class="team-info">
+          <h4>David Thompson</h4>
+          <p>Digital Specialist</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="./p4.jpg">
+        <div class="team-info">
+          <h4>Sophia Lee</h4>
+          <p>Financial Analyst</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+<!-- footer -->
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <p>We provide innovative IT solutions to help businesses thrive in the digital era.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://algenix.axiomthemes.com/contact-us-1/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +91 12345 67890</p>
+      <p>Address: 123 Tech Street, Surat, Gujarat</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s">Facebook</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s">Linked in</a>
+        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</footer>
+
+      <script>
+    const counters = document.querySelectorAll('.number');
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix') || '';
+      let count = 0;
+      const increment = target / 100;
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.textContent = Math.ceil(count) + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target + suffix;
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
