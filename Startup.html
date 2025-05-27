@@ -1,0 +1,1016 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        font-family: "Segoe UI", sans-serif !important;
+        background: #fff;
+        overflow-x: hidden;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #0098ff !important;
+      }
+      .dropdown-menu .dropdown-item:hover {
+        color: #0098ff !important;
+        background-color: #f8f9fa;
+      }
+      .footer {
+        margin-top: 20px;
+        background-color: #0098ff;
+        color: #ffffff;
+        padding: 40px 20px 20px 20px;
+        font-family: Arial, sans-serif;
+      }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .footer-column {
+        flex: 1 1 220px;
+        margin: 20px;
+      }
+      .footer-column h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #ffffff;
+      }
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+      .footer-column ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+      .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+        color: #ffffff;
+      }
+      .social-icons img {
+        width: 50px;
+        height: 50px;
+        display: flex;
+      }
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #ffffff;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      .hero-section {
+        width: 100%;
+        height: 100vh;
+      }
+      .backgroundimg {
+        margin-left: 670px;
+      }
+      .txt {
+        margin-top: -650px;
+        font-size: 80px;
+        font-weight: 900;
+        color: black;
+      }
+      .txt h1 {
+        font-size: 150px;
+        font-weight: 900;
+        line-height: 150px;
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .Launch {
+        margin-left: 60px;
+      }
+      .Bold {
+        margin-left: 280px;
+      }
+      .btxt {
+        margin-left: 50px;
+        margin-top: 200px;
+      }
+      .text-slider {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: #fff;
+        padding: 20px 0;
+      }
+      .slider-track {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll-left 40s linear infinite;
+      }
+      .slider-track span {
+        font-size: 48px;
+        font-weight: 600;
+        color: rgba(241, 237, 232, 1); /* Soft white */
+        margin-right: 100px;
+        display: inline-block;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .section {
+        padding: 60px 80px;
+        border-top: 1px solid #000;
+      }
+      .section small {
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #555;
+        text-transform: uppercase;
+      }
+      .section h2 {
+        font-size: 36px;
+        margin: 10px 0 40px;
+      }
+      .feature-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        gap: 40px;
+      }
+      .feature-row img {
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+      .feature-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .feature-title {
+        display: flex;
+        align-items: baseline;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .feature-title span {
+        font-size: 20px;
+        color: #999;
+        margin-right: 12px;
+      }
+      .feature-title h3 {
+        font-size: 20px;
+        margin: 0;
+      }
+      .feature-desc {
+        color: #444;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #eee;
+      }
+      .pragraph {
+        background-color: #f6f4f1;
+        height: 50px;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        margin-top: -4px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        gap: 20px;
+        max-width: 50%;
+        flex: 1;
+        margin-left: 15px;
+        margin-top: 15px;
+      }
+      .image {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        height: 250px;
+      }
+      .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .black-box {
+        background: #111;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        height: 250px;
+        grid-column: span 2;
+      }
+      .banner-text {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      .content {
+        max-width: 45%;
+        flex: 1;
+        padding-left: 40px;
+        margin-top: 100px;
+      }
+      .content h5 {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .content p {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .services {
+        list-style: none;
+        padding: 0;
+      }
+      .services li {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .services li span {
+        font-size: 16px;
+        margin-right: 8px;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        height: 90px;
+      }
+      .marquee-content {
+        display: inline-block;
+        padding: 10px 0;
+        font-size: 16px;
+        animation: scrollLeft 20s linear infinite;
+      }
+      .marquee-content span {
+        margin: 0 15px;
+        color: #111;
+        font-size: 50px;
+        font-weight: 500;
+      }
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .center {
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      .toggle {
+        background: #f1f1f1;
+        display: inline-flex;
+        border-radius: 25px;
+        padding: 4px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+      .toggle button {
+        border: none;
+        background: transparent;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .toggle .active {
+        background-color: #0098ff;
+        color: #fff;
+      }
+      .pricing-table {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .plan {
+        border: 1px solid #ddd;
+        padding: 30px 20px;
+        border-radius: 15px;
+        width: 250px;
+        text-align: center;
+      }
+      .plan h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .price {
+        font-size: 36px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .per {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .desc {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #555;
+      }
+      .features {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .features div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .features div span {
+        margin-left: 10px;
+      }
+      .features .yes::before {
+        content: "✔";
+        color: #2196f3;
+      }
+      .features .no::before {
+        content: "✖";
+        color: #f44336;
+      }
+      .plan button {
+        padding: 10px 20px;
+        background: #0098ff;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .subscription-container {
+        max-width: 1200px;
+        margin: 100px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+      }
+      .text-content h2 {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
+      .form-content {
+        max-width: 600px;
+        width: 100%;
+      }
+      .subscribe-form {
+        display: flex;
+        border-radius: 9999px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .subscribe-form input[type="email"] {
+        flex: 1;
+        padding: 14px 20px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: #000;
+      }
+      .subscribe-form button {
+        padding: 14px 25px;
+        background-color: #0098ff;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      .subscribe-form button:hover {
+        background-color: #0070ff;
+      }
+      .consent {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #bbb;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .consent input {
+        margin-top: 2px;
+      }
+      .highlight {
+        color: #0098ff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">IT Demo Website</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.html">Home</a></li>
+                <li>
+                  <a class="dropdown-item" href="./DigitalAgency.html"
+                    >Digital Agency</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./AI.HTML">AI Technology</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Seoservice.html"
+                    >SEO Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./CustomSoftware.html"
+                    >Custom Software</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Startup.html">Start Up</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./marketingAgency.html"
+                    >Marketing Agency</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Helpdesk.html">Help Desk</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./AInetwork.html"
+                    >AI Network</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./Servicesa.html">App</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Servicesw.html">Website</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown">
+                Page
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./About-us.html">About-us 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./About-us2.html"
+                    >About-us 2</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Servicesa.html">Service 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Servicesw.html">Service 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./ourteam.html">Our Team</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Contect-us.html"
+                    >Contect-us 1</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./contect us2.html"
+                    >Contect-us 2</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./AIfetures.html"
+                    >AI Features</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="./FAQs.html">FAQs</a></li>
+                <li>
+                  <a class="dropdown-item" href="./pricing 1.html"
+                    >Pricing -1</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./pricing2.html">Pricing -2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown">
+                Portfolio
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./ourwork.html">Our works</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Singlepage.html"
+                    >Single Project</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown">
+                Blog
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./blogs.html"
+                    >Blog — Standard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blogg.html">Blog — Grid</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blogws.html"
+                    >With-Slidebar</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blogwithout.html"
+                    >Without Slidebar</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Contect-us.html">Contact-us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./About-us.html">About-us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <img
+        src="https://algenix.axiomthemes.com/wp-content/uploads/2025/05/custom-img-145-copyright.jpg"
+        class="backgroundimg" />
+
+      <div class="txt">
+        <h1 class="Launch">Launch</h1>
+        <h1 class="Bold">Bold</h1>
+      </div>
+      <div class="btxt">
+        <h3>We develop <br />solutions that <br />change the <br />future</h3>
+      </div>
+    </section>
+
+    <div class="text-slider">
+      <div class="slider-track">
+        <span>YOUR DIGITAL BREAKTHROUGH STARTS HERE</span>
+        <span>YOUR DIGITAL BREAKTHROUGH STARTS HERE</span>
+        <span>YOUR DIGITAL BREAKTHROUGH STARTS HERE</span>
+        <span>YOUR DIGITAL BREAKTHROUGH STARTS HERE</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <small>EMPOWERING YOUR BRAND</small>
+      <h2>We innovate digital experiences</h2>
+
+      <div class="feature-row">
+        <img
+          src="https://img.freepik.com/free-photo/saas-concept-collage_23-2149399281.jpg?ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740"
+          alt="Cloud Services" />
+        <div class="feature-content">
+          <div class="feature-title">
+            <span>01.</span>
+            <h3>Cloud Infrastructure & Services</h3>
+          </div>
+          <p class="feature-desc">
+            Deliver scalable, secure, and efficient cloud solutions tailored for
+            enterprises. We help you migrate, manage, and optimize cloud
+            infrastructures with AWS, Azure, or Google Cloud to enhance agility
+            and cost-efficiency.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="feature-row">
+        <img
+          src="https://img.freepik.com/free-photo/html-css-collage-concept-with-hacker_23-2150061984.jpg?ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740"
+          alt="Cybersecurity" />
+        <div class="feature-content">
+          <div class="feature-title">
+            <span>02.</span>
+            <h3>Cybersecurity Solutions</h3>
+          </div>
+          <p class="feature-desc">
+            Safeguard your digital assets with advanced cybersecurity services.
+            From vulnerability assessments to end-to-end security architecture,
+            we protect your infrastructure from evolving threats and ensure data
+            integrity.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="feature-row">
+        <img
+          src="https://img.freepik.com/free-photo/people-office-analyzing-checking-finance-graphs_23-2150377131.jpg?ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740"
+          alt="IT Consulting" />
+        <div class="feature-content">
+          <div class="feature-title">
+            <span>03.</span>
+            <h3>IT Strategy & Consulting</h3>
+          </div>
+          <p class="feature-desc">
+            Align your IT capabilities with business goals. We provide expert
+            consulting in digital transformation, software architecture, system
+            integration, and IT project planning to future-proof your
+            organization.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="img">
+      <img
+        src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-47-copyright.jpg" />
+    </div>
+    <div class="pragraph">
+      <p>Ready to get started? A place where innovation thrive every day</p>
+    </div>
+    <div class="container">
+      <div class="images">
+        <div class="image black-box">
+          <p class="banner-text">
+            We will help you to design, develop, and deploy intelligent IT
+            systems.
+          </p>
+        </div>
+        <div class="image">
+          <img
+            src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-48-copyright-300x300.jpg"
+            alt="Coding" />
+        </div>
+        <div class="image">
+          <img
+            src="https://algenix.axiomthemes.com/wp-content/uploads/2025/04/custom-img-49-copyright-768x373.jpg"
+            alt="IT Office" />
+        </div>
+      </div>
+
+      <div class="content">
+        <h5>WHY US</h5>
+        <h2>We build smart IT solutions</h2>
+        <p>
+          TechNext empowers organizations with cutting-edge IT services, ranging
+          from custom software development to cloud transformation and
+          cybersecurity. We help businesses streamline operations, enhance
+          digital experiences, and scale securely.
+        </p>
+        <p>
+          Our dedication to innovation, reliability, and technical excellence
+          ensures every solution is designed with the client’s long-term growth
+          in mind.
+        </p>
+
+        <ul class="services">
+          <li>
+            <span>🔧</span>
+            <strong>Custom Software Development</strong><br />
+            Scalable and secure software tailored to your needs.
+          </li>
+          <li>
+            <span>☁️</span>
+            <strong>Cloud & DevOps</strong><br />
+            Cloud migration, CI/CD, and infrastructure automation.
+          </li>
+          <li>
+            <span>🔐</span>
+            <strong>Cybersecurity Solutions</strong><br />
+            Risk assessment, threat monitoring, and compliance.
+          </li>
+          <li>
+            <span>📈</span>
+            <strong>Data Analytics & AI</strong><br />
+            Insights and automation through data and AI models.
+          </li>
+          <li>
+            <span>💼</span>
+            <strong>IT Consulting Services</strong><br />
+            End-to-end guidance on digital transformation.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <span>development &#x2727;</span>
+        <span>agency &#x2727;</span>
+        <span>design &#x2727;</span>
+        <span>creative &#x2727;</span>
+        <span>figma &#x2727;</span>
+        <span>themeforest &#x2727;</span>
+        <span>ui/ux &#x2727;</span>
+        <span>wordpress &#x2727;</span>
+        <span>development &#x2727;</span>
+        <span>agency &#x2727;</span>
+        <span>design &#x2727;</span>
+        <span>creative &#x2727;</span>
+        <span>figma &#x2727;</span>
+        <span>themeforest &#x2727;</span>
+        <span>ui/ux &#x2727;</span>
+        <span>wordpress &#x2727;</span>
+      </div>
+    </div>
+
+    <div class="center">
+      <small>FLEXIBLE PRICING</small>
+      <h2>Pick the best plan for your business</h2>
+
+      <div class="toggle">
+        <button id="monthlyBtn" class="active">Monthly</button>
+        <button id="yearlyBtn">Yearly</button>
+      </div>
+    </div>
+
+    <div class="pricing-table">
+      <div class="plan" id="starter">
+        <h3>Starter</h3>
+        <div class="price" id="starterPrice">$50</div>
+        <div class="per">/ per month</div>
+        <p class="desc">
+          Transform your business with our innovative solutions.
+        </p>
+        <div class="features">
+          <div class="yes"><span>Feature pricing plan #1</span></div>
+          <div class="yes"><span>Feature pricing plan #2</span></div>
+          <div class="yes"><span>Feature pricing plan #3</span></div>
+          <div class="yes"><span>Feature pricing plan #4</span></div>
+          <div class="no"><span>Feature pricing plan #5</span></div>
+          <div class="yes"><span>Feature pricing plan #6</span></div>
+        </div>
+        <button>Order Now</button>
+      </div>
+
+      <div class="plan" id="expert">
+        <h3>Expert</h3>
+        <div class="price" id="expertPrice">$100</div>
+        <div class="per">/ per month</div>
+        <p class="desc">
+          Transform your business with our innovative solutions.
+        </p>
+        <div class="features">
+          <div class="yes"><span>Feature pricing plan #1</span></div>
+          <div class="yes"><span>Feature pricing plan #2</span></div>
+          <div class="yes"><span>Feature pricing plan #3</span></div>
+          <div class="yes"><span>Feature pricing plan #4</span></div>
+          <div class="yes"><span>Feature pricing plan #5</span></div>
+          <div class="yes"><span>Feature pricing plan #6</span></div>
+        </div>
+        <button>Order Now</button>
+      </div>
+
+      <div class="plan" id="advanced">
+        <h3>Advanced</h3>
+        <div class="price" id="advancedPrice">$150</div>
+        <div class="per">/ per month</div>
+        <p class="desc">
+          Transform your business with our innovative solutions.
+        </p>
+        <div class="features">
+          <div class="yes"><span>Feature pricing plan #1</span></div>
+          <div class="yes"><span>Feature pricing plan #2</span></div>
+          <div class="yes"><span>Feature pricing plan #3</span></div>
+          <div class="yes"><span>Feature pricing plan #4</span></div>
+          <div class="yes"><span>Feature pricing plan #5</span></div>
+          <div class="yes"><span>Feature pricing plan #6</span></div>
+        </div>
+        <button>Order Now</button>
+      </div>
+    </div>
+    <div class="subscription-container">
+      <div class="text-content">
+        <h2>Subscribe for the latest<br />news and updates!</h2>
+      </div>
+      <div class="form-content">
+        <form class="subscribe-form">
+          <input type="email" placeholder="Your Email Address" required />
+          <button type="submit">Get Started</button>
+        </form>
+        <label class="consent">
+          <input type="checkbox" />
+          I agree that my submitted data is being
+          <span class="highlight">collected and stored.</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We provide innovative IT solutions to help businesses thrive in the
+            digital era.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li>
+              <a href="https://algenix.axiomthemes.com/contact-us-1/"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +91 12345 67890</p>
+          <p>Address: 123 Tech Street, Surat, Gujarat</p>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_IY167VvxTB92i2XatBmz5oeOMtiwGMjng&s" />Facebook</a
+            >
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQx72nL2ZQw4THXkQQ84xz7fQt9Ttoe9H2Eg&s" />Linked
+              in</a
+            >
+            <a href="#"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5eJT_yVnoZ4nYxPD2poHS13jzzKXM8G8CA&s" />Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const monthlyBtn = document.getElementById("monthlyBtn");
+      const yearlyBtn = document.getElementById("yearlyBtn");
+
+      const starterPrice = document.getElementById("starterPrice");
+      const expertPrice = document.getElementById("expertPrice");
+      const advancedPrice = document.getElementById("advancedPrice");
+
+      const perMonthTexts = document.querySelectorAll(".per");
+
+      monthlyBtn.addEventListener("click", () => {
+        monthlyBtn.classList.add("active");
+        yearlyBtn.classList.remove("active");
+
+        starterPrice.textContent = "$50";
+        expertPrice.textContent = "$100";
+        advancedPrice.textContent = "$150";
+        perMonthTexts.forEach((el) => (el.textContent = "/ per month"));
+      });
+
+      yearlyBtn.addEventListener("click", () => {
+        yearlyBtn.classList.add("active");
+        monthlyBtn.classList.remove("active");
+
+        starterPrice.textContent = "$550";
+        expertPrice.textContent = "$1100";
+        advancedPrice.textContent = "$3000";
+        perMonthTexts.forEach((el) => (el.textContent = "/ per year"));
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
