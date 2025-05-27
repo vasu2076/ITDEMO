@@ -158,17 +158,6 @@
       }
     }
 
-    /* weareon */
-    .weareon{
-      text-align: center;
-      margin-top: 150px;
-      margin-bottom: 0px;
-    }
-    .weonimg{
-      display: flex;
-      height: 50%;
-      justify-content: space-between;
-    }
 
   /* Footer Styles */
 .footer {
