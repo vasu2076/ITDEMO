@@ -14,12 +14,10 @@
            .navbar-nav .nav-link:hover {
     color: #0098ff !important;
   }
-
   .dropdown-menu .dropdown-item:hover {
     color: #0098ff !important;
     background-color: #f8f9fa;
-  }
-       
+  }      
 .footer {
     margin-top: 20px;
   background-color: #0098ff;
@@ -80,91 +78,104 @@ body {
       color: #333;
     }
     .top-banner {
-      background-color: #0098ff;
-      color: white;
-      text-align: center;
-      padding: 40px 20px 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .top-banner h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-    .top-banner p {
-      margin-bottom: 10px;
-    }
-    .contact-info {
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-    }
-    .ticket-section,
-    .faq-section {
-      background: white;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-    }
-    .ticket-section h2,
-    .faq-section h2 {
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      color: #2d3e50;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    form input,
-    form select,
-    form textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    form button {
-      background-color: #0098ff;
-      color: white;
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #0070ff;
-    }
-    .confirmation {
-      margin-top: 15px;
-      color: green;
-      font-weight: bold;
-      display: none;
-    }
-    .faq-section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .faq-section li {
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .faq-section a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    .faq-section a:hover {
-      text-decoration: underline;
-    }
+        background-color: #0098ff;
+        color: white;
+        text-align: center;
+        padding: 40px 20px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      .top-banner h1 {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+      }
+      .top-banner p {
+        margin-bottom: 10px;
+      }
+      .contact-info {
+        font-size: 0.9rem;
+        margin-top: 10px;
+      }
+      .intro {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+      }
+      .ticket-section,
+      .faq-section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      .ticket-section h2,
+      .faq-section h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #2d3e50;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      form input,
+      form select,
+      form textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+      form button {
+        background-color: #0098ff;
+        color: white;
+        padding: 12px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      form button:hover {
+        background-color: #0070ff;
+      }
+      .confirmation {
+        margin-top: 15px;
+        color: green;
+        font-weight: bold;
+        display: none;
+      }
+      .faq-section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .faq-section li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .faq-section a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+      .faq-section a:hover {
+        text-decoration: underline;
+      }
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .slide-up {
+        animation: slideUp 1s ease-out forwards;
+      }
     </style>
   </head>
   <body>
@@ -264,47 +275,47 @@ body {
     <p>If you're facing any issues with your system, software, or company network, our team is ready to assist you. Fill out the form below or browse through our most popular support topics.</p>
   </section>
 
-  <section class="ticket-section">
-    <h2>What Can I Help You ?</h2>
-    <form onsubmit="event.preventDefault(); document.querySelector('.confirmation').style.display = 'block';">
-      <label>Name</label>
-      <input type="text" placeholder="John Doe" required />
+    <section id="ticket" class="ticket-section">
+      <h2>What Can I Help You ?</h2>
+      <form onsubmit="event.preventDefault(); document.querySelector('.confirmation').style.display = 'block';">
+        <label>Name</label>
+        <input type="text" placeholder="John Doe" required />
 
-      <label>Email</label>
-      <input type="email" placeholder="john@example.com" required />
+        <label>Email</label>
+        <input type="email" placeholder="john@example.com" required />
 
-      <label>Subject</label>
-      <input type="text" placeholder="Issue Subject" required />
+        <label>Subject</label>
+        <input type="text" placeholder="Issue Subject" required />
 
-      <label>Issue Type</label>
-      <select required>
-        <option value="">Choose One</option>
-        <option>Login Problem</option>
-        <option>Software Issue</option>
-        <option>Network/Internet</option>
-        <option>Hardware Malfunction</option>
-        <option>Other</option>
-      </select>
+        <label>Issue Type</label>
+        <select required>
+          <option value="">Choose One</option>
+          <option>Login Problem</option>
+          <option>Software Issue</option>
+          <option>Network/Internet</option>
+          <option>Hardware Malfunction</option>
+          <option>Other</option>
+        </select>
 
-      <label>Details</label>
-      <textarea placeholder="Describe the issue in detail..." rows="6"></textarea>
+        <label>Details</label>
+        <textarea placeholder="Describe the issue in detail..." rows="6"></textarea>
 
-      <button type="submit">Send Request</button>
-      <p class="confirmation">✅ Your request has been submitted. We'll contact you shortly.</p>
-    </form>
-  </section>
+        <button type="submit">Send Request</button>
+        <p class="confirmation">✅ Your request has been submitted. We'll contact you shortly.</p>
+      </form>
+    </section>
 
-  <section class="faq-section">
-    <h2>Popular Help Topics</h2>
-    <ul>
-      <li><a href="#">🔒 How to reset your company email password</a></li>
-      <li><a href="#">🌐 VPN not connecting? Follow these steps</a></li>
-      <li><a href="#">🛠 Installing company-approved software</a></li>
-      <li><a href="#">🖥 Can’t access internal systems or shared drives</a></li>
-      <li><a href="#">📞 Setting up softphone for remote work</a></li>
-      <li><a href="#">🔧 Printer troubleshooting guide</a></li>
-    </ul>
-  </section>
+  <section id="faq" class="faq-section">
+      <h2>Popular Help Topics</h2>
+      <ul>
+        <li><a href="#">🔒 How to reset your company email password</a></li>
+        <li><a href="#">🌐 VPN not connecting? Follow these steps</a></li>
+        <li><a href="#">🛠 Installing company-approved software</a></li>
+        <li><a href="#">🖥 Can’t access internal systems or shared drives</a></li>
+        <li><a href="#">📞 Setting up softphone for remote work</a></li>
+        <li><a href="#">🔧 Printer troubleshooting guide</a></li>
+      </ul>
+    </section>
 
 <!-- footer -->
  <footer class="footer">
@@ -342,6 +353,14 @@ body {
   </div>
 </footer>
 
+   <script>
+      window.addEventListener('load', () => {
+        document.getElementById('ticket').classList.add('slide-up');
+        setTimeout(() => {
+          document.getElementById('faq').classList.add('slide-up');
+        }, 300);
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
   </body>
 </html>
